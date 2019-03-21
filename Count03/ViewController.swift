@@ -10,11 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Label: UILabel!
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func Countbtn(_ sender: Any) {
+        count += 1
+        Label.text = "\(count)"
+        
+        if count == 9 {
+            Label.text = "\(count)"
+            count = 0
+            
+        }
+        //for i in  1...9{
+        
+        //Label.text! = Label.text! + "\(i) "
+    }
+    
 
 }
 
